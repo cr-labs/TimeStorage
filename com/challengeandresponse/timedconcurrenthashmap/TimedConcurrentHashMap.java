@@ -32,7 +32,8 @@ public class TimedConcurrentHashMap <K,V> {
 
 	private ConcurrentHashMap <K,TimedObject <V>> hashmap;
 
-	// if globalTimeout is set (value > 0) then the simple methods (sans expiration time) can be used just like in the regular ConcurrentHashMap
+	// if globalTimeout is set (value > 0) then the simple methods (sans expiration time) can be used just like in the
+	// regular ConcurrentHashMap
 	// if it is not set, then calling those methods (e.g. put(Key,Value)) will thrown an exception
 	private long globalTimeoutMsec;
 
